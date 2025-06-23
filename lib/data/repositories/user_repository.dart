@@ -61,27 +61,5 @@ class UserRepository {
     return isLoggedIn;
   }
 
-  /// Get user profile from API
-  Future<User> getUserProfile() async {
-    print('UserRepository: Get user profile called');
-    return await _apiService.getUserProfile();
-  }
-
-  /// Update user profile
-  Future<User> updateUserProfile({
-    required String name,
-    String? avatar,
-  }) async {
-    print('UserRepository: Update user profile called - Name: $name');
-    final updatedUser = await _apiService.updateUserProfile(
-      name: name,
-      avatar: avatar,
-    );
-    
-    // Update local storage
-    await _storageService.saveUser(updatedUser);
-    print('UserRepository: Updated user data saved to storage');
-    
-    return updatedUser;
-  }
+  /// (Optional) You can implement getUserProfile and updateUserProfile using Supabase as needed
 } 

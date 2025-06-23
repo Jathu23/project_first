@@ -44,6 +44,9 @@ dependencies:
   
   # Go Router for navigation
   go_router: ^13.2.0
+  
+  # Supabase Flutter for Supabase integration
+  supabase_flutter: ^2.3.4
 
 dev_dependencies:
   flutter_test:
